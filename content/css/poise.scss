@@ -1,0 +1,24 @@
+$poise-black: #282A30;
+$poise-dark-green: #516E75;
+$poise-green: #07747F;
+$poise-brown: #BFB5AC;
+
+@import 'variables';
+@import 'bootstrap';
+@import "bootstrap/theme";
+
+.navbar-brand {
+  padding: 4px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.navbar-brand-inner {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+}
+
