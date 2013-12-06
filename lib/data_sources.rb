@@ -34,8 +34,15 @@ module Nanoc::DataSources
     end
   end
 
+  class FontAwesome < Static
+    def items
+      config[:prefix] = Font::Awesome::Sass.fonts_path
+      super
+    end
+  end
 
   Nanoc::DataSource.register '::Nanoc::DataSources::BootstrapFonts',  :bootstrap_fonts
   Nanoc::DataSource.register '::Nanoc::DataSources::BootstrapJavascripts',  :bootstrap_javascripts
+  Nanoc::DataSource.register '::Nanoc::DataSources::FontAwesome',  :font_awesome
 
 end

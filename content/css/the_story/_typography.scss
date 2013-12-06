@@ -1,0 +1,47 @@
+// Copyright 2013, prettyspoon.com
+// Copyright 2013, Noah Kantrowitz
+
+/* Typography */
+/* -------------------------------------------------- */
+
+body {
+  font-weight: 300;
+}
+
+.navbar-brand {
+  margin: 0;
+  padding: 6px;
+  font-size: 25px;
+  line-height: 27px;
+  float: left;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.page-headline {
+  font-size: 42px;
+  text-align: center;
+}
+
+.large {
+  font-size: 52px;
+}
+
+.lead {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.big {
+  font-size: 25px;
+  line-height: 29px;
+  padding: 0;
+}
+
+strong {
+  font-weight: 400;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}

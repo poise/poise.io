@@ -2,23 +2,60 @@ $poise-black: #282A30;
 $poise-dark-green: #516E75;
 $poise-green: #07747F;
 $poise-brown: #BFB5AC;
+$poise-light-brown: lighten($poise-brown, 20%);
+$poise-white: #E3E3E3;
 
-@import 'variables';
+
+// Variable overrides
+$body-bg: $poise-black;
+
+$font-family-sans-serif: Open Sans, Source Sans Pro, Helvetica, Arial, sans-serif;
+
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
+$btn-primary-bg: $poise-green;
+
+$navbar-height: 40px;
+$navbar-default-color: $poise-white;
+$navbar-default-bg: $poise-black;
+$navbar-default-link-color: $navbar-default-color;
+$navbar-default-link-hover-color: $navbar-default-link-color;
+$navbar-default-link-hover-bg: lighten($poise-black, 10%);
+$navbar-default-link-active-bg: $poise-light-brown;
+$navbar-default-link-active-color: $poise-black;
+
+$jumbotron-bg: $poise-brown;
+
 @import 'bootstrap';
-@import "bootstrap/theme";
+@import 'font-awesome';
+@import 'the_story';
 
-.navbar-brand {
-  padding: 4px;
-  font-family: 'Roboto Slab', serif;
+body {
+  padding-top: 40px;
 }
 
-.navbar-brand-inner {
-  display: inline-block;
-  padding: 10px 0;
+#nav-home.active a {
+  // To match the jumbotron
+  background-color: $poise-brown;
 }
 
-.navbar-brand img {
-  width: 40px;
-  height: 40px;
+.jumbotron-headline {
+  text-align: center;
+  padding-bottom: 30px;
 }
 
+.content {
+  background-color: $poise-light-brown;
+}
+
+footer {
+  color: $poise-white;
+  // background-color: $poise-black;
+  padding: 30px 0;
+  a { color: $poise-white; }
+  a:hover { color: $poise-green; }
+  .social a { margin-right: 10px; }
+  .copyright { line-height: 42px; }
+}

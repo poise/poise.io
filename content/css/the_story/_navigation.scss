@@ -1,0 +1,23 @@
+// Copyright 2013, prettyspoon.com
+// Copyright 2013, Noah Kantrowitz
+
+/* Navigation */
+/* -------------------------------------------------- */
+
+.navbar {
+  border: 0;
+  ul {
+    font-size: 15px;
+    margin: 0;
+  }
+  .container {
+    padding: 0 30px;//$grid-gutter-width;
+  }
+  .navbar-toggle {
+    color: #fff;
+  }
+  li a {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

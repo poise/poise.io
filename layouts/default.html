@@ -8,14 +8,14 @@
   <link href="/favicon.png" rel="icon" type="image/png">
   <link href="/favicon.ico" rel="shortcut icon">
   <link href="/css/poise.css" rel="stylesheet" type="text/css">
-  <link href="//fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Open Sans:400,600,700italic,900,400italic,300" rel="stylesheet" type="text/css">
   <!--[if lt IE 9]>
       <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
   <![endif]-->
 </head>
 <body>
   <div class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-container">
+    <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -23,21 +23,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">
-          <img src="/img/logo.png" alt="Poise logo">
-          <span class="navbar-brand-inner">Poise</span>
-        </a>
+        <a class="navbar-brand" href="/">Poise</a>
       </div>
       <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a title="Home page" href="/">Home</a></li>
-          <li><a title="Using Poise" href="/using/">Using Poise</a></li>
-          <li><a title="Cookbook patterns" href="/patterns/">Patterns</a></li>
+          <li class="<%= @item.identifier == '/' && 'active' %>" id="nav-home"><a title="Home page" href="/">Home</a></li>
+          <li class="<%= @item.identifier == '/using/' && 'active' %>" ><a title="Using Poise" href="/using/">Using Poise</a></li>
+          <li class="<%= @item.identifier == '/patterns/' && 'active' %>" ><a title="Cookbook patterns" href="/patterns/">Patterns</a></li>
         </ul>
       </div>
     </div>
   </div>
 
+  <div class="content">
     <%= content_for(@item, :pre_container) %>
 
     <div class="container">
@@ -45,12 +43,28 @@
 
       <hr>
 
-      <footer>
+<!--       <footer>
         <p>&copy; 2013 Noah Kantrowitz</p>
-      </footer>
+      </footer> -->
+
+
     </div>
 
     <%= content_for(@item, :post_container) %>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="pull-right copyright">
+        &copy; 2013 Noah Kantrowitz
+      </div>
+      <div class="social">
+        <a href="https://twitter.com/PoiseOps"><i class="fa fa-twitter fa-3x"></i></a>
+        <a href="https://github.com/poise"><i class="fa fa-github-square fa-3x"></i></a>
+        <a href="mailto:noah@coderanger.net"><i class="fa fa-envelope fa-3x"></i></a>
+      </div>
+    </div>
+  </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>

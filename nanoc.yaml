@@ -66,3 +66,6 @@ data_sources:
 
   - type: bootstrap_javascripts
     items_root: /static/js/
+
+  - type: font_awesome
+    items_root: /static/fonts/
