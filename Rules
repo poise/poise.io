@@ -19,7 +19,12 @@ end
 
 compile '*' do
   next if item.binary?
-  filter :erb
+  case item[:extension]
+  when 'html', 'erb'
+    filter :erb
+  when 'md'
+    filter :kramdown
+  end
   layout 'default'
 end
 
