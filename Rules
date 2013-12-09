@@ -14,7 +14,9 @@
 #   because “*” matches zero or more characters.
 
 compile '/css/*' do
-  filter :sass, Compass.sass_engine_options
+  unless item.identifier.split('/').last[0] == '_'
+    filter :sass, Compass.sass_engine_options
+  end
 end
 
 compile '*' do
@@ -31,7 +33,11 @@ end
 
 
 route '/css/*' do
-  item.identifier.chop + '.css'
+  if item.identifier.split('/').last[0] == '_'
+    nil
+  else
+    item.identifier.chop + '.css'
+  end
 end
 
 route '/static/*' do
