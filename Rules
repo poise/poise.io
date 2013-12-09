@@ -25,7 +25,7 @@ compile '*' do
   when 'html', 'erb'
     filter :erb
   when 'md'
-    filter :kramdown
+    filter :kramdown, item[:kramdown] || {}
   end
   layout 'default'
 end
